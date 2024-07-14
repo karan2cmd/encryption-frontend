@@ -33,7 +33,9 @@ const SendMessage = () => {
         <div>
           <h3>Response</h3>
           <p>Status: {response.status}</p>
-          <p>Message Id: {response.messageId}</p>
+          {response.messageId && (
+            <p>Message Id: {response.messageId}</p>
+          )}
           <p>Encrypted Message: {response.encryptedMessage}</p>
         </div>
       )}
